@@ -106,6 +106,12 @@ describe RailsAdmin::Config::Model do
     end
   end
 
+  describe '#default_index_action' do
+    it 'is :index' do
+      expect(RailsAdmin.config(Comment).default_index_action).to eq(:index)
+    end
+  end
+
   describe '#parent' do
     it 'is nil for ActiveRecord::Base inherited models' do
       expect(RailsAdmin.config(Comment).parent).to be_nil

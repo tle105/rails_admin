@@ -72,6 +72,10 @@ module RailsAdmin
         0
       end
 
+      register_instance_option :default_index_action do
+        :index
+      end
+
       # parent node in navigation/breadcrumb
       register_instance_option :parent do
         @parent_model ||= begin
